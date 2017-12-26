@@ -1,6 +1,7 @@
 package cn.tuyuan.commonweal.service;
 
 
+import org.springframework.transaction.annotation.Transactional;
 
 import cn.tuyuan.commonweal.pojo.Person;
 
@@ -9,6 +10,7 @@ import cn.tuyuan.commonweal.pojo.Person;
  * 2017年12月23日
  *
  */
+@Transactional
 public interface PersonService {
 	/**
 	 * @describe 登录验证1
@@ -22,15 +24,4 @@ public interface PersonService {
 	 */
 	Person  fastLogin(String iphone);
 	
-	/**   2017年12月24日
-	 * @param 用户注册
-	 * @return 影响番薯
-	 */
-	int savePerson(Person person);
-	
-	/**
-	 * @param 根据手机id判断用户是否存在
-	 * @return
-	 */
-	boolean getPersonById(String iphone);
 }

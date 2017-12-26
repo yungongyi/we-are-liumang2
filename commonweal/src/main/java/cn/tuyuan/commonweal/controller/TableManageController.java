@@ -15,7 +15,7 @@ import cn.tuyuan.commonweal.service.TableManageService;
 public class TableManageController {
 
 	@Resource 
-	private TableManageService tableManageService;
+	private TableManageService tableManageController;
 	
 	
 }

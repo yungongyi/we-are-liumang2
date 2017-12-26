@@ -22,5 +22,5 @@ public interface ResourceDao {
 	 * @param resource
 	 * @return  1 or 0 
 	 */
-	public Resource getResourceById(int id);
+	public Resource getResource(Resource resource);
 }

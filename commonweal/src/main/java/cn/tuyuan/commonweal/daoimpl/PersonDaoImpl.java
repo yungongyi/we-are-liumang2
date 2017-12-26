@@ -1,6 +1,9 @@
 package cn.tuyuan.commonweal.daoimpl;
 
 
+import java.util.List;
+
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -23,30 +26,18 @@ public class PersonDaoImpl extends HibernateDaoSupport implements PersonDao {
 	} 
 	//根据手机号查询用户
 	public Person getPerson(String iphone) {
-		Person persons= null;
+
 		try {
-			String hql ="from Person where iphone = ? ";
-			if( this.getHibernateTemplate().find(hql, iphone).isEmpty()){
-				System.out.println("psersons:"+persons);
-		      return null;
+			String hql ="from Person where iphone = ?";
+			Person persons= (Person) this.getHibernateTemplate().find(hql, iphone).get(0);
+			System.out.println(persons.getIphone());
+			if(persons!=null){
+				return persons;
 			}
-			persons = (Person) this.getHibernateTemplate().find(hql, iphone).get(0);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		return persons;
-	}
-
-	//新增一条用户信息
-	public int savePerson(Person person) {
-		return (int) this.getHibernateTemplate().getSessionFactory().getCurrentSession().save(person);
-	}
-
-	//根据手机号码判断该用户是否存在
-	public boolean getPersonByid(String iphone) {
-		boolean empty = this.getHibernateTemplate().find("from Person where iphone = ? ", iphone).isEmpty();
-		return empty;
+		return null;
 	}
 
 }

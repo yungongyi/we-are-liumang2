@@ -12,23 +12,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta name="viewport"
 	content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
 <link rel="stylesheet" type="text/css"
-	href="<%=basePath%>/static/css/bootstrap.css" />
-<link rel="stylesheet" href="<%=basePath%>/static/css/loginpage.css" />
+	href="/static/css/bootstrap.css" />
+<link rel="stylesheet" href="/static/css/loginpage.css" />
 <title>登录</title>
-<script src="<%=basePath%>/static/js/jquery-1.12.4.js"></script>
-<script src="<%=basePath%>/static/js/bootstrap.js"></script>
+<script src="/static/js/jquery-1.12.4.js"></script>
+<script src="/static/js/bootstrap.js"></script>
 <!--雪花的js-->
 <script type="text/javascript"
-	src="<%=basePath%>/static/js/loginpageJs/xuehua/winternetizer.js"></script>
+	src="/static/js/loginpageJs/xuehua/winternetizer.js"></script>
 <!--图片验证码js-->
 <script type="text/javascript"
-	src="<%=basePath%>/static/js/loginpageJs/yanzhengma/gVerify.js"></script>
+	src="/static/js/loginpageJs/yanzhengma/gVerify.js"></script>
 <!--手写表单验证-->
 <script type="text/javascript"
-	src="<%=basePath%>/static/js/loginpageJs/loginvalidation.js"></script>
+	src="/static/js/loginpageJs/loginvalidation.js"></script>
 <!-- 获取验证码 -->
 <script type="text/javascript"
-	src="<%=basePath%>/static/js/loginpageJs/getsendsms.js"></script>
+	src="/static/js/loginpageJs/getsendsms.js"></script>
 <style>
 </style>
 </head>
@@ -36,7 +36,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <body>
 	<div id="LoginPage">
 		<div class="container logincontainer">
-		 
 			<div class="row">
 				<div class="col-md-12 col-lg-12 col-xs-12 text-center">
 					<h1 id="title">登录开启云公益</h1>
@@ -122,7 +121,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									<button id="flogin" type="submit"
 										class="btn btn-primary form-control">登录</button>
 									<a class="goregister" target="_self"
-										href="<%=basePath%>/jsp/registerpage.jsp">还没有账号？去注册..</a>
+										href="/WEB-INF/jsp/registerpage.jsp">还没有账号？去注册..</a>
 								</div>
 							</div>
 						</form>

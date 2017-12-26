@@ -25,7 +25,11 @@ public class TestResource {
 	try {
 		ApplicationContext app=new ClassPathXmlApplicationContext("applicationContext.xml");
 		Resource re=new Resource();
-		
+		re.setResourcePath("static/image/a.jpg");
+		re.setResourceSource("外国");
+		ResourceService userdao=(ResourceService) app.getBean("resourceService");
+		Resource ss=userdao.getResource(null);
+		System.out.println(ss.getResourceSource());
 		
 	} catch (Exception e) {
 		e.printStackTrace();

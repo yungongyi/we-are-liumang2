@@ -3,8 +3,6 @@ package cn.tuyuan.commonweal.dao;
 import java.util.List;
 
 import cn.tuyuan.commonweal.pojo.TableManage;
-
-
 /**
  * @version 1.0
  * @author 陈嘉伟

@@ -20,8 +20,8 @@ public class ResourceServiceImpl implements ResourceService {
 		}
 		return false;
 	}
-	public Resource getResourceById(int id) {
-		return resourcedao.getResourceById(id);
+	public Resource getResource(Resource resource) {
+		return resourcedao.getResource(resource);
 		
 	}
 }
