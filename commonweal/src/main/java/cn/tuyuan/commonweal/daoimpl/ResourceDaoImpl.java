@@ -22,11 +22,10 @@ public class ResourceDaoImpl extends HibernateDaoSupport implements ResourceDao 
 		int res=(int) this.getHibernateTemplate().save(resource);
 		return res;
 	}
+	
 	@Override
-	public Resource getResource(Resource resource) {
-		List<Resource> s=(List<Resource>) this.getHibernateTemplate().find("from Resource");
-		
-		return (Resource) s.get(0);
+	public Resource getResourceById(int id) {	
+		return (Resource) this.getHibernateTemplate().find("from Resource r where r.resourceId", id);
 	}
 
 }
